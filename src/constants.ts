@@ -14,5 +14,5 @@ export const siteContent = {
     'I work across machine learning, optimization, engineering design, and smart manufacturing with growing interests in low-resource language technologies and applied AI systems.',
   aboutSummary:
     'I am an undergraduate student at BUET with interests spanning machine learning, NLP, operations research, simulation, manufacturing systems, and engineering design.',
-  photoUrl: 'https://picsum.photos/seed/muqtadir/400/400',
+  photoUrl: '/src/data/img/fuad.jpg',
 };
