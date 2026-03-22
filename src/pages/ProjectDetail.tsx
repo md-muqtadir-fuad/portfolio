@@ -45,9 +45,9 @@ export default function ProjectDetail() {
           </p>
         </div>
 
-        <div className="aspect-video rounded-[2.5rem] overflow-hidden border border-zinc-100 shadow-2xl">
+        <div className="aspect-video rounded-[0.5rem] overflow-hidden border border-zinc-100 shadow-xl">
           <img
-            src={`https://picsum.photos/seed/${project.slug}/1200/675`}
+            src={(project as any).imageUrl || `https://picsum.photos/seed/${project.slug}/1200/675`}
             alt={project.title}
             className="w-full h-full object-cover"
             referrerPolicy="no-referrer"

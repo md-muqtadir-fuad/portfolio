@@ -62,7 +62,7 @@ export default function Projects() {
               >
                 <div className="aspect-video bg-zinc-100 relative overflow-hidden">
                   <img
-                    src={`https://picsum.photos/seed/${project.slug}/800/450`}
+                    src={project.imageUrl || `https://picsum.photos/seed/${project.slug}/800/450`}
                     alt={project.title}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     referrerPolicy="no-referrer"

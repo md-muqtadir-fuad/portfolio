@@ -90,7 +90,7 @@ export default function Home() {
             >
               <Link to={`/projects/${project.slug}`} className="block aspect-video overflow-hidden bg-zinc-100 border border-zinc-100">
                 <img
-                  src={`https://picsum.photos/seed/${project.slug}/800/450`}
+                  src={project.imageUrl || `https://picsum.photos/seed/${project.slug}/800/450`}
                   alt={project.title}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 grayscale hover:grayscale-0"
                   referrerPolicy="no-referrer"

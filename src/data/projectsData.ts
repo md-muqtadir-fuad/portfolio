@@ -5,6 +5,7 @@ export const projectsData = [
     title: 'eGov-Lens',
     category: 'Machine Learning / NLP',
     shortDescription: 'Multi-dimensional ML approach for aspect-based public feedback analysis on Bengali e-Gov platforms.',
+    imageUrl: 'https://github.com/md-muqtadir-fuad/portfolio/blob/master/public/images/text_feature_log.png?raw=true',
     overview: 'This project focuses on analyzing public feedback on e-government platforms in Bangladesh using advanced NLP techniques. We developed a multi-dimensional ML model to categorize feedback into various aspects and sentiments, providing actionable insights for policy makers.',
     tools: ['Python', 'PyTorch', 'Transformers', 'Scikit-learn'],
     highlights: [
@@ -22,6 +23,7 @@ export const projectsData = [
     title: 'IoT-Based Smart Conveyor',
     category: 'IoT / Industrial Engineering',
     shortDescription: 'Integrated quality, inventory, and process control system using IoT.',
+    imageUrl: 'https://github.com/md-muqtadir-fuad/iot-web-app/blob/master/groups/circuits/b4.png?raw=true',
     overview: 'A smart conveyor system designed for real-time monitoring of manufacturing processes. It integrates sensors and IoT modules to track quality metrics, inventory levels, and process efficiency.',
     tools: ['Arduino', 'Raspberry Pi', 'Node.js', 'MQTT'],
     highlights: [
