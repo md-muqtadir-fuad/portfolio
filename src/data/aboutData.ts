@@ -93,7 +93,8 @@ export const aboutData = {
   awards: [
     '2025 — 60% Scholarship for CSCA Certification, ISCEA Prize Global Supply Chain Case Competition (Top 100/400+ teams)',
     '2022 — University Stipend for Merit, BUET',
-    '2023 — Organizer & Volunteer Award, Satyen Bose Science Club, BUET'
+    '2023 — Organizer & Volunteer Award, Satyen Bose Science Club, BUET',
+    '2013 — Apex Talent Award, Bandarban'
   ],
 
   trainings: [

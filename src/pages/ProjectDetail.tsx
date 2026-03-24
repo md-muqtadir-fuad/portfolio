@@ -45,7 +45,7 @@ export default function ProjectDetail() {
           </p>
         </div>
 
-        <div className="aspect-video rounded-[0.5rem] overflow-hidden border border-zinc-100 shadow-xl">
+        <div className="aspect-video rounded-[.5rem] overflow-hidden border border-zinc-100 shadow-2xl">
           <img
             src={(project as any).imageUrl || `https://picsum.photos/seed/${project.slug}/1200/675`}
             alt={project.title}
@@ -56,6 +56,19 @@ export default function ProjectDetail() {
 
         <div className="grid md:grid-cols-3 gap-12">
           <div className="md:col-span-2 space-y-12">
+            {project.detailedDescription && (
+              <section className="space-y-6">
+                <h2 className="text-2xl font-bold font-display">About the Project</h2>
+                <div className="prose prose-zinc max-w-none">
+                  {project.detailedDescription.split('\n\n').map((paragraph, i) => (
+                    <p key={i} className="text-zinc-600 leading-relaxed mb-4">
+                      {paragraph}
+                    </p>
+                  ))}
+                </div>
+              </section>
+            )}
+
             <section className="space-y-6">
               <h2 className="text-2xl font-bold font-display">Key Highlights</h2>
               <div className="grid gap-4">

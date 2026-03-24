@@ -4,7 +4,7 @@ export default function Footer() {
   const socialLinks = [
     { name: "GitHub", icon: <Github size={20} />, url: "https://github.com/md-muqtadir-fuad" },
     { name: "LinkedIn", icon: <Linkedin size={20} />, url: "https://linkedin.com/in/md-muqtadir-fuad" },
-    { name: "Twitter", icon: <Twitter size={20} />, url: "https://twitter.com/muqtadir_fuad" },
+    { name: "Twitter", icon: <Twitter size={20} />, url: "https://twitter.com/mmuqtadir_fuad" },
     { name: "Email", icon: <Mail size={20} />, url: "mailto:mmfuad01@gmail.com" },
   ];
 

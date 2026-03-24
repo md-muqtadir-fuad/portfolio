@@ -8,7 +8,7 @@ export const siteContent = {
     github: 'https://github.com/md-muqtadir-fuad',
     linkedin: 'https://www.linkedin.com/in/md-muqtadir-fuad/',
     orcid: 'https://orcid.org/0009-0009-4362-0780',
-    resume: '#',
+    resume: 'https://github.com/md-muqtadir-fuad/portfolio/blob/master/public/resume/resume-muqtadir-fuad.pdf?raw=true',
   },
   heroSummary:
     'I work across machine learning, optimization, engineering design, and smart manufacturing with growing interests in low-resource language technologies and applied AI systems.',

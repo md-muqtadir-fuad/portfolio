@@ -45,13 +45,13 @@ export default function Home() {
           transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
           className="flex-1 flex justify-center md:justify-end"
         >
-          <div className="relative w-64 h-64 md:w-96 md:h-96">
-            <div className="absolute inset-0 border-2 border-emerald-600 translate-x-4 translate-y-4 -z-10" />
+          <div className="relative z-0 w-64 h-64 md:w-96 md:h-96 group cursor-pointer">
+            <div className="absolute inset-0 border-2 border-emerald-600 translate-x-4 translate-y-4 group-hover:translate-x-0 group-hover:translate-y-0 transition-transform duration-500 ease-out -z-10" />
             <div className="w-full h-full overflow-hidden border border-zinc-200 bg-zinc-100 shadow-2xl">
               <img 
                 src={siteContent.photoUrl} 
                 alt={siteContent.name}
-                className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
+                className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
                 referrerPolicy="no-referrer"
               />
             </div>

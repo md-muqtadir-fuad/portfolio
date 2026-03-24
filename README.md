@@ -91,6 +91,10 @@ The application uses Firebase for its dynamic content. To connect your own Fireb
    ```
 4. Deploy the security rules provided in `firestore.rules`.
 
+## Branch Nomenclature
+
+For each issue (if applicable), branch name should be `portfolio-issue#<issue no>`
+
 ## License
 
 This project is for personal portfolio use. All research content and project data belong to Md. Muqtadir Fuad.
