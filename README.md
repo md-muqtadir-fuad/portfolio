@@ -53,8 +53,8 @@ This application is a full-stack web portfolio designed to showcase academic res
 
 1. **Clone the repository:**
    ```bash
-   git clone <your-repo-url>
-   cd <your-repo-name>
+   git clone https://github.com/md-muqtadir-fuad/portfolio.git
+   cd portfolio
    ```
 
 2. **Install dependencies:**

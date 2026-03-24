@@ -1,8 +1,40 @@
 import { motion } from "motion/react";
-import { Mail, MapPin, Send, Github, Linkedin, Globe } from "lucide-react";
+import { Mail, MapPin, Send, Github, Linkedin, Globe, CheckCircle2, AlertCircle, Loader2 } from "lucide-react";
 import { siteContent } from "../constants";
+import { useState } from "react";
+import { db, handleFirestoreError, OperationType } from "../firebase";
+import { collection, addDoc, serverTimestamp } from "firebase/firestore";
 
 export default function Contact() {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
+  const [errorMessage, setErrorMessage] = useState("");
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!name || !email || !message) return;
+
+    setStatus("loading");
+    try {
+      await addDoc(collection(db, "messages"), {
+        name,
+        email,
+        message,
+        createdAt: serverTimestamp(),
+      });
+      setStatus("success");
+      setName("");
+      setEmail("");
+      setMessage("");
+    } catch (error) {
+      setStatus("error");
+      setErrorMessage("Failed to send message. Please try again later.");
+      handleFirestoreError(error, OperationType.CREATE, "messages");
+    }
+  };
+
   return (
     <div className="pt-32 pb-16 px-4 max-w-7xl mx-auto">
       <motion.div
@@ -68,11 +100,28 @@ export default function Contact() {
             </div>
           </div>
 
-          <form className="p-8 bg-zinc-50 rounded-[2.5rem] border border-zinc-100 space-y-6">
+          <form onSubmit={handleSubmit} className="p-8 bg-zinc-50 rounded-[2.5rem] border border-zinc-100 space-y-6">
+            {status === "success" && (
+              <div className="p-4 bg-emerald-50 border border-emerald-200 rounded-2xl flex items-start gap-3 text-emerald-800">
+                <CheckCircle2 className="shrink-0 mt-0.5" size={20} />
+                <p className="text-sm font-medium">Thank you! Your message has been sent successfully. I'll get back to you soon.</p>
+              </div>
+            )}
+            
+            {status === "error" && (
+              <div className="p-4 bg-red-50 border border-red-200 rounded-2xl flex items-start gap-3 text-red-800">
+                <AlertCircle className="shrink-0 mt-0.5" size={20} />
+                <p className="text-sm font-medium">{errorMessage}</p>
+              </div>
+            )}
+
             <div className="space-y-2">
               <label className="text-sm font-bold text-zinc-500 ml-2">Name</label>
               <input
                 type="text"
+                required
+                value={name}
+                onChange={(e) => setName(e.target.value)}
                 placeholder="Your Name"
                 className="w-full px-6 py-4 bg-white border border-zinc-200 rounded-2xl focus:outline-none focus:ring-2 focus:ring-emerald-500 transition-all"
               />
@@ -81,6 +130,9 @@ export default function Contact() {
               <label className="text-sm font-bold text-zinc-500 ml-2">Email</label>
               <input
                 type="email"
+                required
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
                 placeholder="your@email.com"
                 className="w-full px-6 py-4 bg-white border border-zinc-200 rounded-2xl focus:outline-none focus:ring-2 focus:ring-emerald-500 transition-all"
               />
@@ -88,16 +140,24 @@ export default function Contact() {
             <div className="space-y-2">
               <label className="text-sm font-bold text-zinc-500 ml-2">Message</label>
               <textarea
+                required
                 rows={4}
+                value={message}
+                onChange={(e) => setMessage(e.target.value)}
                 placeholder="How can I help you?"
                 className="w-full px-6 py-4 bg-white border border-zinc-200 rounded-2xl focus:outline-none focus:ring-2 focus:ring-emerald-500 transition-all resize-none"
               />
             </div>
             <button
               type="submit"
-              className="w-full py-4 bg-emerald-600 text-white rounded-2xl font-bold hover:bg-emerald-700 transition-all flex items-center justify-center gap-2"
+              disabled={status === "loading"}
+              className="w-full py-4 bg-emerald-600 text-white rounded-2xl font-bold hover:bg-emerald-700 transition-all flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed"
             >
-              Send Message <Send size={18} />
+              {status === "loading" ? (
+                <>Sending... <Loader2 size={18} className="animate-spin" /></>
+              ) : (
+                <>Send Message <Send size={18} /></>
+              )}
             </button>
           </form>
         </div>
