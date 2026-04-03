@@ -8,6 +8,7 @@ import ProjectDetail from "./pages/ProjectDetail";
 import Experience from "./pages/Experience";
 import LeadershipDetail from "./pages/LeadershipDetail";
 import Publications from "./pages/Publications";
+import Achievements from "./pages/Achievements";
 import Contact from "./pages/Contact";
 import Admin from "./pages/Admin";
 import { motion, AnimatePresence } from "motion/react";
@@ -63,6 +64,7 @@ export default function App() {
                 <Route path="/experience" element={<Experience />} />
                 <Route path="/leadership/:slug" element={<LeadershipDetail />} />
                 <Route path="/publications" element={<Publications />} />
+                <Route path="/achievements" element={<Achievements />} />
                 <Route path="/contact" element={<Contact />} />
                 <Route path="/admin" element={<Admin />} />
               </Routes>

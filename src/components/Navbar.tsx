@@ -54,6 +54,7 @@ export default function Navbar() {
     { name: "Projects", path: "/projects" },
     { name: "Experience", path: "/experience" },
     { name: "Publications", path: "/publications" },
+    { name: "Achievements", path: "/achievements" },
     { name: "Contact", path: "/contact" },
     ...(isAdmin ? [{ name: "Admin", path: "/admin" }] : []),
   ];
