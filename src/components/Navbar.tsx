@@ -78,7 +78,7 @@ export default function Navbar() {
               </Link>
             ))}
             
-            {user ? (
+            {user && (
               <div className="flex items-center gap-4 pl-4 border-l border-black/5">
                 <div className="flex items-center gap-2">
                   {user.photoURL ? (
@@ -96,13 +96,6 @@ export default function Navbar() {
                   <LogOut size={16} /> Logout
                 </button>
               </div>
-            ) : (
-              <button
-                onClick={handleLogin}
-                className="px-4 py-1.5 bg-zinc-900 text-white text-sm font-medium rounded-full hover:bg-zinc-800 transition-colors flex items-center gap-2"
-              >
-                <LogIn size={16} /> Login
-              </button>
             )}
           </div>
 
@@ -138,23 +131,16 @@ export default function Navbar() {
               {link.name}
             </Link>
           ))}
-          <div className="pt-4 mt-4 border-t border-black/5">
-            {user ? (
+          {user && (
+            <div className="pt-4 mt-4 border-t border-black/5">
               <button
                 onClick={() => { handleLogout(); setIsOpen(false); }}
                 className="w-full text-left px-3 py-2 text-base font-medium text-red-600 hover:bg-red-50 rounded-md flex items-center gap-2"
               >
                 <LogOut size={20} /> Logout
               </button>
-            ) : (
-              <button
-                onClick={() => { handleLogin(); setIsOpen(false); }}
-                className="w-full text-left px-3 py-2 text-base font-medium text-emerald-600 hover:bg-emerald-50 rounded-md flex items-center gap-2"
-              >
-                <LogIn size={20} /> Login with Google
-              </button>
-            )}
-          </div>
+            </div>
+          )}
         </motion.div>
       )}
     </nav>
