@@ -6,7 +6,7 @@ import { projectsData } from "../data/projectsData";
 import { publicationsData } from "../data/publicationsData";
 
 export default function Home() {
-  const selectedProjects = projectsData.slice(0, 2);
+  const selectedProjects = projectsData.slice(0, 3);
   const featuredPublications = publicationsData.slice(0, 2);
 
   return (
@@ -78,7 +78,7 @@ export default function Home() {
           </Link>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-12">
+        <div className="grid md:grid-cols-3 gap-8">
           {selectedProjects.map((project, i) => (
             <motion.div
               key={project.slug}
@@ -88,7 +88,7 @@ export default function Home() {
               transition={{ duration: 0.6, delay: i * 0.1 }}
               className="group space-y-6"
             >
-              <Link to={`/projects/${project.slug}`} className="block aspect-video overflow-hidden bg-zinc-100 border border-zinc-100">
+              <Link to={`/projects/${project.slug}`} className="block aspect-video overflow-hidden bg-zinc-100 border border-zinc-200">
                 <img
                   src={project.imageUrl || `https://picsum.photos/seed/${project.slug}/800/450`}
                   alt={project.title}
