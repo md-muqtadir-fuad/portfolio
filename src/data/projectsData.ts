@@ -15,7 +15,7 @@ export const projectsData = [
       'Presented at ICCIT 2025.'
     ],
     links: [
-      { label: 'ResearchGate', url: 'https://www.researchgate.net/profile/Md-Muqtadir-Fuad' }
+      { label: 'ResearchGate', url: 'https://github.com/md-muqtadir-fuad/eGov-Lens' }
     ]
   },
   {

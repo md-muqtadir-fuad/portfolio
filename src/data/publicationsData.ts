@@ -24,9 +24,9 @@ export const publicationsData = [
       'Fuad, M. M., Mazid, A. A., Adnan, M. I., & Ammar, K.',
     venue:
       'Proceedings of the 8th IEOM Bangladesh International Conference on Industrial Engineering and Operations Management, Dhaka, Bangladesh, Dec. 20–21, 2025',
-    link: '',
-    abstract: 'This paper explores the complex relationship between throughput and quality in labor-intensive manufacturing environments. Using stochastic modeling, we analyze how operator fatigue and process instability contribute to variability in production output and quality levels. The findings provide a theoretical basis for optimizing shift schedules and workstation ergonomics.'
-  },
+    link: 'https://index.ieomsociety.org/index.cfm/item/58299',
+    abstract: 'The inherent variability of manual assembly process possesses significant challenges to standardization and quality assurance within semi-automated food production sector. The study presents a quantitative and comparative analysis of stochastic nature of human fatigue that affect the productivity. By integrating high resolution time motion analysis along with statistical process control (SPC), this research has dived into two manual production line to quantify quality parameters, find relationship among product shape, operator performance behavior, efficiency and unit weight consistency. We employed regression analysis to estimate the relationship between time and worker fatigue in a controlled environment. Furthermore, process capability analysis reveals the relationship of human fatigue and process instability. Finally, using Monte Carlo algorithm, we have simulated the data to quantify the annual financial loss due to process instability.'
+    },
   {
     id: 3,
     year: '2025',
