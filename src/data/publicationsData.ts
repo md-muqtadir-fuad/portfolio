@@ -16,7 +16,7 @@ export const publicationsData = [
   {
     id: 2,
     year: '2025',
-    status: 'Under Review',
+    status: 'Published',
     type: 'Conference Paper',
     title:
       'Stochastic Modeling of Throughput-Quality Dynamics in Labor-Intensive Manufacturing: A Comparative Analysis of Operator Fatigue and Process Instability',
