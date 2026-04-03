@@ -6,6 +6,7 @@ import About from "./pages/About";
 import Projects from "./pages/Projects";
 import ProjectDetail from "./pages/ProjectDetail";
 import Experience from "./pages/Experience";
+import LeadershipDetail from "./pages/LeadershipDetail";
 import Publications from "./pages/Publications";
 import Contact from "./pages/Contact";
 import Admin from "./pages/Admin";
@@ -60,6 +61,7 @@ export default function App() {
                 <Route path="/projects" element={<Projects />} />
                 <Route path="/projects/:slug" element={<ProjectDetail />} />
                 <Route path="/experience" element={<Experience />} />
+                <Route path="/leadership/:slug" element={<LeadershipDetail />} />
                 <Route path="/publications" element={<Publications />} />
                 <Route path="/contact" element={<Contact />} />
                 <Route path="/admin" element={<Admin />} />

@@ -1,6 +1,7 @@
 import { motion } from "motion/react";
+import { Link } from "react-router-dom";
 import { experienceData } from "../data/experienceData";
-import { Briefcase, Users, Trophy, ExternalLink, MapPin, Calendar } from "lucide-react";
+import { Briefcase, Users, Trophy, ExternalLink, MapPin, Calendar, ArrowRight } from "lucide-react";
 
 export default function Experience() {
   return (
@@ -59,23 +60,35 @@ export default function Experience() {
           </h2>
           <div className="grid md:grid-cols-2 gap-6">
             {experienceData.leadership.map((item, i) => (
-              <div key={i} className="p-6 bg-zinc-50 rounded-3xl border border-zinc-100 space-y-4">
-                <div className="space-y-1">
-                  <h3 className="text-xl font-bold text-zinc-900">{item.title}</h3>
-                  <p className="text-emerald-600 font-medium">{item.organization}</p>
+              <div key={i} className="p-6 bg-zinc-50 rounded-3xl border border-zinc-100 space-y-6 flex flex-col">
+                <div className="space-y-4 flex-1">
+                  <div className="space-y-1">
+                    <h3 className="text-xl font-bold text-zinc-900">{item.title}</h3>
+                    <p className="text-emerald-600 font-medium">{item.organization}</p>
+                  </div>
+                  <div className="flex items-center justify-between text-sm text-zinc-500">
+                    <span>{item.period}</span>
+                    <span>{item.location}</span>
+                  </div>
+                  <ul className="space-y-2">
+                    {item.bullets.map((bullet, j) => (
+                      <li key={j} className="text-sm text-zinc-600 flex gap-2">
+                        <div className="w-1 h-1 rounded-full bg-emerald-400 mt-2 shrink-0" />
+                        {bullet}
+                      </li>
+                    ))}
+                  </ul>
                 </div>
-                <div className="flex items-center justify-between text-sm text-zinc-500">
-                  <span>{item.period}</span>
-                  <span>{item.location}</span>
-                </div>
-                <ul className="space-y-2">
-                  {item.bullets.map((bullet, j) => (
-                    <li key={j} className="text-sm text-zinc-600 flex gap-2">
-                      <div className="w-1 h-1 rounded-full bg-emerald-400 mt-2 shrink-0" />
-                      {bullet}
-                    </li>
-                  ))}
-                </ul>
+                {item.slug && (
+                  <div className="pt-4 border-t border-zinc-200">
+                    <Link
+                      to={`/leadership/${item.slug}`}
+                      className="inline-flex items-center gap-2 text-sm font-bold text-zinc-900 hover:text-emerald-600 transition-colors group"
+                    >
+                      View Details <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
+                    </Link>
+                  </div>
+                )}
               </div>
             ))}
           </div>
