@@ -25,7 +25,7 @@ export const achievementsData: Achievement[] = [
     description: 'Completed a professional internship focusing on industrial operations, quality control protocols, and supply chain management systems.',
     place: 'Bangladesh',
     tags: ['Quality Control', 'Supply Chain Management', 'Industrial Engineering'],
-    imageUrl: 'https://media.licdn.com/dms/image/v2/D562DAQG63DLhIn_AxA/profile-treasury-image-shrink_800_800/B56ZrpFFrlMIAc-/0/1764847020790?e=1775858400&v=beta&t=zHqe4uuKfKRu8PwA5I1SMilcbg15jGoFQMCzBWRG408',
+    imageUrl: 'https://github.com/md-muqtadir-fuad/portfolio/blob/master/public/images/intern.jpg?raw=true',
     imageOrientation: 'vertical'
   },
   {
@@ -37,7 +37,7 @@ export const achievementsData: Achievement[] = [
     description: 'Recognized for demonstrated proficiency and contributions in the fields of Natural Language Processing and Large Language Models.',
     place: 'Chittagong, Bangladesh',
     tags: ['NLP', 'LLM', 'Artificial Intelligence'],
-    imageUrl: 'https://media.licdn.com/dms/image/v2/D562DAQH21xpooIVzdQ/profile-treasury-image-shrink_800_800/B56ZrpKmqYLYAY-/0/1764848464133?e=1775858400&v=beta&t=bO-BNjG-35MGY0RCINT1Kwu-Qk0f7_0JCqY-DmVMtvo',
+    imageUrl: 'https://github.com/md-muqtadir-fuad/portfolio/blob/master/public/images/asr-25.jpg?raw=true',
     imageOrientation: 'horizontal'
   },
   {
@@ -49,7 +49,7 @@ export const achievementsData: Achievement[] = [
     description: 'Awarded for delivering an oral presentation on "Aerodynamic Performance Analysis of NACA 4415 Airfoil Incorporating Gurney and Bionic Flap" at the 7th Bangladeshi International Conference on IEOM.',
     place: 'Dhaka, Bangladesh',
     tags: ['Aerodynamics', 'CFD', 'Numerical Analysis'],
-    imageUrl: 'https://media.licdn.com/dms/image/v2/D562DAQG0873Txyv1CQ/profile-treasury-image-shrink_800_800/profile-treasury-image-shrink_800_800/0/1738572852659?e=1775858400&v=beta&t=Ia23l3flbK_i_v1cgbhwrBZfSkHVcxQ8_eLKDnkyKA4',
+    imageUrl: 'https://github.com/md-muqtadir-fuad/portfolio/blob/master/public/images/ieom-24-pp.jpg?raw=true',
     imageOrientation: 'vertical'
   },
   {
@@ -61,11 +61,11 @@ export const achievementsData: Achievement[] = [
     description: 'Mastered R programming including RShiny web development, data manipulation with dplyr, and advanced visualization with ggplot2.',
     place: 'Online',
     tags: ['R', 'Data Science', 'RShiny', 'Data Visualization'],
-    imageUrl: 'https://media.licdn.com/dms/image/v2/D562DAQEqZpoVRCS5BQ/profile-treasury-document-cover-images_1280/profile-treasury-document-cover-images_1280/0/1719170250218?e=1775862000&v=beta&t=fjHxZQOEVAVxFV4J2WZmjZT1vsADu7yaGNVt1NbKshs',
+    imageUrl: 'https://github.com/md-muqtadir-fuad/portfolio/blob/master/public/images/r-bohubrihi.png?raw=true',
     imageOrientation: 'horizontal',
     link: {
       label: 'View Credential',
-      url: 'https://bohubrihi.com/certificate/66787365726937986928c5f6'
+      url: 'https://res.cloudinary.com/bohubrihi/image/upload/v1719169976/production/667873b5726937986928c5f6.pdf'
     }
   },
   {
@@ -77,7 +77,7 @@ export const achievementsData: Achievement[] = [
     description: 'A comprehensive 5-course series covering data structures, web scraping, database management with SQLite, and data visualization using Python.',
     place: 'Coursera',
     tags: ['Python', 'SQL', 'Web Scraping', 'Data Structures'],
-    imageUrl: 'https://media.licdn.com/dms/image/v2/D562DAQHN7AaDz5NIVg/profile-treasury-document-cover-images_1280/profile-treasury-document-cover-images_1280/0/1714921100755?e=1775862000&v=beta&t=TDhgggoCotGq0lKR5YQX17EeNhODgOp2qPAgr2ltjzs',
+    imageUrl: 'https://github.com/md-muqtadir-fuad/portfolio/blob/master/public/images/p-five.jpg?raw=true',
     imageOrientation: 'horizontal',
     link: {
       label: 'View Credential',
@@ -93,7 +93,7 @@ export const achievementsData: Achievement[] = [
     description: 'Focused on Python fundamentals including conditional statements, loops, list manipulation, and building small-scale database applications.',
     place: 'Coursera',
     tags: ['Python', 'Programming Fundamentals'],
-    imageUrl: 'https://media.licdn.com/dms/image/v2/D562DAQFIU4E5R7-iVg/profile-treasury-document-images_1280/profile-treasury-document-images_1280/1/1714642961416?e=1776297600&v=beta&t=vG49k6ptJ47KMvpe9YO_CNo95zqBtVq7wcaJMLJlS0Q',
+    imageUrl: 'https://github.com/md-muqtadir-fuad/portfolio/blob/master/public/images/p-basics-2.jpg?raw=true',
     imageOrientation: 'horizontal',
     link: {
       label: 'View Credential',
@@ -109,7 +109,7 @@ export const achievementsData: Achievement[] = [
     description: 'Participated in a strategic seminar focused on cyber law awareness and the role of students in preventing digital crimes.',
     place: 'Bangladesh',
     tags: ['Cybersecurity', 'Cyberlaw'],
-    imageUrl: 'https://media.licdn.com/dms/image/v2/D562DAQEta8ptEB6MIw/profile-treasury-image-shrink_800_800/profile-treasury-image-shrink_800_800/0/1714244009094?e=1775862000&v=beta&t=7BlUkLApUmh7d9iYleuHPZb0GfKGmu1dLrAFCtLW1IE',
+    imageUrl: 'https://github.com/md-muqtadir-fuad/portfolio/blob/master/public/images/cyber.jpg?raw=true',
     imageOrientation: 'vertical'
   },
   {
@@ -121,7 +121,7 @@ export const achievementsData: Achievement[] = [
     description: 'Completed intensive training in Machine Learning and Natural Language Processing (NLP) workflows.',
     place: 'Online',
     tags: ['Machine Learning', 'NLP', 'Data Science'],
-    imageUrl: 'https://media.licdn.com/dms/image/v2/D562DAQFHiljzoiXT2g/profile-treasury-image-shrink_800_800/profile-treasury-image-shrink_800_800/0/1703960324178?e=1775862000&v=beta&t=cr0mbvabI0yUoFA870kZgiXwkB-aor3kvOALo0XksLM',
+    imageUrl: 'https://github.com/md-muqtadir-fuad/portfolio/blob/master/public/images/hewill-nlp.jpg?raw=true',
     imageOrientation: 'horizontal'
   },
   {
@@ -133,7 +133,7 @@ export const achievementsData: Achievement[] = [
     description: 'Foundational certification covering the core syntax and logic of the Python programming language.',
     place: 'Coursera',
     tags: ['Python', 'Coding Basics'],
-    imageUrl: 'https://media.licdn.com/dms/image/v2/D562DAQHEeiSKp1vJpA/profile-treasury-image-shrink_800_800/B56Z1VZM1LKEAc-/0/1775254166764?e=1775862000&v=beta&t=f2Wpnh4aNWHcYeyuR8s06t8si9xsFgCuhLlo29Xb_5o',
+    imageUrl: 'https://github.com/md-muqtadir-fuad/portfolio/blob/master/public/images/p-basics.jpg?raw=true',
     imageOrientation: 'horizontal',
     link: {
       label: 'View Credential',
