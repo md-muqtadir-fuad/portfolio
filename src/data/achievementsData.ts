@@ -121,7 +121,7 @@ export const achievementsData: Achievement[] = [
     description: 'Completed intensive training in Machine Learning and Natural Language Processing (NLP) workflows.',
     place: 'Online',
     tags: ['Machine Learning', 'NLP', 'Data Science'],
-    imageUrl: 'https://github.com/md-muqtadir-fuad/portfolio/blob/master/public/images/hewill-nlp.jpg?raw=true',
+    imageUrl: 'https://github.com/md-muqtadir-fuad/portfolio/blob/master/public/images/herwill-nlp.jpg?raw=true',
     imageOrientation: 'horizontal'
   },
   {
