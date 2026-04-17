@@ -7,6 +7,7 @@ export interface Achievement {
   description: string;
   place: string;
   tags: string[];
+  category: string;
   imageUrl: string;
   imageOrientation: 'horizontal' | 'vertical';
   link?: {
@@ -25,6 +26,7 @@ export const achievementsData: Achievement[] = [
     description: 'Completed a professional internship focusing on industrial operations, quality control protocols, and supply chain management systems.',
     place: 'Bangladesh',
     tags: ['Quality Control', 'Supply Chain Management', 'Industrial Engineering'],
+    category: 'Internship & Professional Experience',
     imageUrl: 'https://github.com/md-muqtadir-fuad/portfolio/blob/master/public/images/intern.jpg?raw=true',
     imageOrientation: 'vertical'
   },
@@ -34,9 +36,10 @@ export const achievementsData: Achievement[] = [
     month: 'Nov',
     title: 'Certificate of Appreciation',
     issuer: 'Chittagong University of Engineering & Technology (CUET)',
-    description: 'Recognized for demonstrated proficiency and contributions in the fields of Natural Language Processing and Large Language Models.',
+    description: 'Recognized for participation and achievement in a hackathon focused on Automatic Speech Recognition and Large Language Models.',
     place: 'Chittagong, Bangladesh',
-    tags: ['NLP', 'LLM', 'Artificial Intelligence'],
+    tags: ['Hackathon', 'NLP', 'LLM', 'Artificial Intelligence'],
+    category: 'Competitions & Hackathons',
     imageUrl: 'https://github.com/md-muqtadir-fuad/portfolio/blob/master/public/images/asr-25.jpg?raw=true',
     imageOrientation: 'horizontal'
   },
@@ -49,6 +52,7 @@ export const achievementsData: Achievement[] = [
     description: 'Awarded for delivering an oral presentation on "Aerodynamic Performance Analysis of NACA 4415 Airfoil Incorporating Gurney and Bionic Flap" at the 7th Bangladeshi International Conference on IEOM.',
     place: 'Dhaka, Bangladesh',
     tags: ['Aerodynamics', 'CFD', 'Numerical Analysis'],
+    category: 'Research & Conferences',
     imageUrl: 'https://github.com/md-muqtadir-fuad/portfolio/blob/master/public/images/ieom-24-pp.jpg?raw=true',
     imageOrientation: 'vertical'
   },
@@ -61,6 +65,7 @@ export const achievementsData: Achievement[] = [
     description: 'Mastered R programming including RShiny web development, data manipulation with dplyr, and advanced visualization with ggplot2.',
     place: 'Online',
     tags: ['R', 'Data Science', 'RShiny', 'Data Visualization'],
+    category: 'Programming, AI & Data Science',
     imageUrl: 'https://github.com/md-muqtadir-fuad/portfolio/blob/master/public/images/r-bohubrihi.png?raw=true',
     imageOrientation: 'horizontal',
     link: {
@@ -77,6 +82,7 @@ export const achievementsData: Achievement[] = [
     description: 'A comprehensive 5-course series covering data structures, web scraping, database management with SQLite, and data visualization using Python.',
     place: 'Coursera',
     tags: ['Python', 'SQL', 'Web Scraping', 'Data Structures'],
+    category: 'Programming, AI & Data Science',
     imageUrl: 'https://github.com/md-muqtadir-fuad/portfolio/blob/master/public/images/p-five.jpg?raw=true',
     imageOrientation: 'horizontal',
     link: {
@@ -93,24 +99,13 @@ export const achievementsData: Achievement[] = [
     description: 'Focused on Python fundamentals including conditional statements, loops, list manipulation, and building small-scale database applications.',
     place: 'Coursera',
     tags: ['Python', 'Programming Fundamentals'],
+    category: 'Programming, AI & Data Science',
     imageUrl: 'https://github.com/md-muqtadir-fuad/portfolio/blob/master/public/images/p-basics-2.jpg?raw=true',
     imageOrientation: 'horizontal',
     link: {
       label: 'View Credential',
       url: 'https://www.coursera.org/account/accomplishments/verify/NRJPDGGLA9SU'
     }
-  },
-  {
-    id: '7',
-    year: '2024',
-    month: 'Apr',
-    title: "Seminar on Students' Engagement to Combat Cyber Crime",
-    issuer: 'Bangladesh Police',
-    description: 'Participated in a strategic seminar focused on cyber law awareness and the role of students in preventing digital crimes.',
-    place: 'Bangladesh',
-    tags: ['Cybersecurity', 'Cyberlaw'],
-    imageUrl: 'https://github.com/md-muqtadir-fuad/portfolio/blob/master/public/images/cyber.jpg?raw=true',
-    imageOrientation: 'vertical'
   },
   {
     id: '8',
@@ -121,6 +116,7 @@ export const achievementsData: Achievement[] = [
     description: 'Completed intensive training in Machine Learning and Natural Language Processing (NLP) workflows.',
     place: 'Online',
     tags: ['Machine Learning', 'NLP', 'Data Science'],
+    category: 'Programming, AI & Data Science',
     imageUrl: 'https://github.com/md-muqtadir-fuad/portfolio/blob/master/public/images/herwill-nlp.jpg?raw=true',
     imageOrientation: 'horizontal'
   },
@@ -133,6 +129,7 @@ export const achievementsData: Achievement[] = [
     description: 'Foundational certification covering the core syntax and logic of the Python programming language.',
     place: 'Coursera',
     tags: ['Python', 'Coding Basics'],
+    category: 'Programming, AI & Data Science',
     imageUrl: 'https://github.com/md-muqtadir-fuad/portfolio/blob/master/public/images/p-basics.jpg?raw=true',
     imageOrientation: 'horizontal',
     link: {
@@ -149,19 +146,90 @@ export const achievementsData: Achievement[] = [
     description: 'Six-month diploma covering Adobe Photoshop, Microsoft Office Suite, and general software applications.',
     place: 'Rajshahi, Bangladesh',
     tags: ['Graphic Design', 'Office Productivity', 'Photoshop'],
+    category: 'Certifications & Professional Development',
     imageUrl: 'https://picsum.photos/seed/postal/800/600',
     imageOrientation: 'horizontal'
   },
   {
-    id: '11',
-    year: '2017',
-    month: 'May',
-    title: 'Computer Literacy Program',
-    issuer: 'Dnet',
-    description: 'Certification in essential computer operations and Microsoft Office proficiency.',
-    place: 'Bangladesh',
-    tags: ['Computer Literacy', 'MS Office'],
-    imageUrl: 'https://picsum.photos/seed/dnet/800/600',
-    imageOrientation: 'horizontal'
+  id: '12',
+  year: '2025',
+  month: 'Dec',
+  title: 'Certificate of Attendance',
+  issuer: 'IEOM Society International',
+  description: 'Attended the 8th IEOM Bangladesh International Conference on Industrial Engineering and Operations Management hosted by World University of Bangladesh.',
+  place: 'Dhaka, Bangladesh',
+  tags: ['Conference', 'IEOM', 'Industrial Engineering'],
+  category: 'Research & Conferences',
+  imageUrl: 'https://github.com/md-muqtadir-fuad/portfolio/blob/master/public/images/attendence-25.jpg?raw=true',
+  imageOrientation: 'vertical'
+},
+{
+  id: '13',
+  year: '2026',
+  month: 'May',
+  title: 'Certificate of Reviewer',
+  issuer: 'IEOM Society International',
+  description: 'Recognized for serving as a reviewer for technical papers and providing expert feedback at the 7th African IEOM Conference.',
+  place: 'Cape Town, South Africa',
+  tags: ['Reviewer', 'Academic Service', 'IEOM'],
+  category: 'Research & Conferences',
+  imageUrl: 'https://github.com/md-muqtadir-fuad/portfolio/blob/master/public/images/review-africa-26.jpg?raw=true',
+  imageOrientation: 'vertical'
+},
+{
+  id: '14',
+  year: '2025',
+  month: 'Dec',
+  title: 'Wiki Loves Children 2025',
+  issuer: 'Bangla WikiConnect',
+  description: 'Received a recognition certificate for participating in Wiki Loves Children 2025, a Bengali Wikipedia content campaign focused on child-related topics.',
+  place: 'Online',
+  tags: ['Wikipedia', 'Community Contribution', 'Content Writing'],
+  category: 'Competitions & Hackathons',
+  imageUrl: 'https://github.com/md-muqtadir-fuad/portfolio/blob/master/public/images/wiki-child-25.jpg?raw=true',
+  imageOrientation: 'horizontal'
+},
+{
+  id: '15',
+  year: '2025',
+  month: 'Feb',
+  title: 'Amar Ekushey Editathon 2025',
+  issuer: 'Wikimedia Bangladesh',
+  description: 'Received a certificate for contributing to Amar Ekushey Article Contest 2025, a Bangla Wikipedia article writing and translation competition.',
+  place: 'Online',
+  tags: ['Wikipedia', 'Article Writing', 'Translation'],
+  category: 'Competitions & Hackathons',
+  imageUrl: 'https://github.com/md-muqtadir-fuad/portfolio/blob/master/public/images/ekushey-25.jpg?raw=true',
+  imageOrientation: 'horizontal'
+},
+{
+  id: '16',
+  year: '2025',
+  month: 'Jan',
+  title: 'Certificate of Appreciation',
+  issuer: 'Titumir Hall, BUET',
+  description: 'Awarded in recognition of the successful management of the dining mess during the first month of the January 2025 term.',
+  place: 'Dhaka, Bangladesh',
+  tags: ['Leadership', 'Operations', 'Service'],
+  category: 'Certifications & Professional Development',
+  imageUrl: 'https://github.com/md-muqtadir-fuad/portfolio/blob/master/public/images/titumir-25.jpg?raw=true',
+  imageOrientation: 'horizontal'
+},
+{
+  "id": "17",
+  "year": "2025",
+  "month": "Dec",
+  "title": "Certificate of Presentation",
+  "issuer": "IEOM Society International",
+  "description": "Delivered an oral presentation at the 8th IEOM Bangladesh International Conference on Industrial Engineering and Operations Management on stochastic modeling of throughput-quality dynamics in labor-intensive manufacturing, focusing on operator fatigue and process instability.",
+  "place": "Dhaka, Bangladesh",
+  "tags": ["Conference", "Presentation", "IEOM", "Manufacturing Systems"],
+  "category": "Research & Conferences",
+  "imageUrl": "https://github.com/md-muqtadir-fuad/portfolio/blob/master/public/images/ieom-25-pp.jpg?raw=true",
+  "imageOrientation": "vertical",
+  "link": {
+    "label": "View Certificate",
+    "url": "https://github.com/md-muqtadir-fuad/portfolio/blob/master/public/images/ieom-25-pp.jpg?raw=true"
   }
+}
 ];

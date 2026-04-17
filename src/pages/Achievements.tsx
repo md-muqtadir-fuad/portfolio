@@ -2,7 +2,66 @@ import { motion } from "motion/react";
 import { achievementsData } from "../data/achievementsData";
 import { Award, ExternalLink, MapPin } from "lucide-react";
 
+const monthOrder: Record<string, number> = {
+  jan: 1,
+  january: 1,
+  feb: 2,
+  february: 2,
+  mar: 3,
+  march: 3,
+  apr: 4,
+  april: 4,
+  may: 5,
+  jun: 6,
+  june: 6,
+  jul: 7,
+  july: 7,
+  aug: 8,
+  august: 8,
+  sep: 9,
+  sept: 9,
+  september: 9,
+  oct: 10,
+  october: 10,
+  nov: 11,
+  november: 11,
+  dec: 12,
+  december: 12,
+};
+
+const categoryOrder = [
+  "Research & Conferences",
+  "Competitions & Hackathons",
+  "Programming, AI & Data Science",
+  "Internship & Professional Experience",
+];
+
 export default function Achievements() {
+  const sortedAchievements = [...achievementsData].sort((a, b) => {
+    const yearDiff = Number(b.year) - Number(a.year);
+    if (yearDiff !== 0) return yearDiff;
+
+    const monthA = monthOrder[a.month.toLowerCase()] || 0;
+    const monthB = monthOrder[b.month.toLowerCase()] || 0;
+
+    return monthB - monthA;
+  });
+
+  const groupedAchievements = sortedAchievements.reduce((groups, item) => {
+    const category = item.category || "Other";
+
+    if (!groups[category]) {
+      groups[category] = [];
+    }
+
+    groups[category].push(item);
+    return groups;
+  }, {} as Record<string, typeof achievementsData>);
+
+  const orderedGroupedAchievements = categoryOrder
+    .filter((category) => groupedAchievements[category])
+    .map((category) => [category, groupedAchievements[category]] as const);
+
   return (
     <div className="pt-32 pb-16 px-4 max-w-7xl mx-auto">
       <motion.div
@@ -20,76 +79,89 @@ export default function Achievements() {
           </p>
         </div>
 
-        <div className="space-y-16 max-w-5xl mx-auto pt-8">
-          {achievementsData.map((item, i) => (
-            <motion.div
-              key={item.id}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: i * 0.1 }}
-              className="flex flex-col md:flex-row gap-8 md:gap-12 w-full border-b border-zinc-200 pb-16 last:border-0"
-            >
-              {/* Left Column: Date & Image */}
-              <div className="md:w-1/4 space-y-4 shrink-0">
-                <div className="text-sm font-medium text-zinc-500 uppercase tracking-widest">
-                  {item.year} — {item.month}
-                </div>
-                <div 
-                  className={`overflow-hidden ${
-                    item.imageOrientation === 'vertical' ? 'aspect-[3/4] max-w-[200px]' : 'aspect-[4/3] w-full'
-                  }`}
-                >
-                  <img 
-                    src={item.imageUrl} 
-                    alt={item.title} 
-                    className="w-full h-full object-cover rounded-none border border-zinc-200" 
-                    referrerPolicy="no-referrer"
-                  />
-                </div>
+        <div className="space-y-20 max-w-5xl mx-auto pt-8">
+          {orderedGroupedAchievements.map(([category, items]) => (
+            <div key={category} className="space-y-8">
+              <div className="flex items-center gap-3">
+                <Award size={22} className="text-emerald-600" />
+                <h2 className="text-3xl font-bold text-zinc-900 font-display">
+                  {category}
+                </h2>
               </div>
 
-              {/* Right Column: Content */}
-              <div className="flex-1 space-y-4 flex flex-col">
-                <div className="space-y-1">
-                  <h3 className="text-2xl font-bold text-zinc-900 font-display">
-                    {item.title} <span className="text-zinc-500 font-normal">— {item.issuer}</span>
-                  </h3>
-                </div>
-                
-                <div className="text-zinc-700 leading-relaxed">
-                  {item.description}
-                </div>
-
-                <div className="space-y-4 pt-2">
-                  <div className="flex items-center gap-2 text-zinc-500 text-sm">
-                    <MapPin size={16} className="text-emerald-600" />
-                    <span>{item.place}</span>
-                  </div>
-                  
-                  <div className="flex flex-wrap gap-4">
-                    {item.tags.map(tag => (
-                      <span key={tag} className="text-zinc-500 text-sm font-medium">
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-
-                  {item.link && (
-                    <div className="pt-2">
-                      <a 
-                        href={item.link.url} 
-                        target="_blank" 
-                        rel="noopener noreferrer" 
-                        className="inline-flex items-center gap-2 text-sm font-bold text-emerald-600 hover:text-emerald-700 transition-colors group"
+              <div className="space-y-16">
+                {items.map((item, i) => (
+                  <motion.div
+                    key={item.id}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5, delay: i * 0.1 }}
+                    className="flex flex-col md:flex-row gap-8 md:gap-12 w-full border-b border-zinc-200 pb-16 last:border-0"
+                  >
+                    <div className="md:w-1/4 space-y-4 shrink-0">
+                      <div className="text-sm font-medium text-zinc-500 uppercase tracking-widest">
+                        {item.year} — {item.month}
+                      </div>
+                      <div
+                        className={`overflow-hidden ${
+                          item.imageOrientation === "vertical"
+                            ? "aspect-[3/4] max-w-[200px]"
+                            : "aspect-[4/3] w-full"
+                        }`}
                       >
-                        <ExternalLink size={16} /> {item.link.label}
-                      </a>
+                        <img
+                          src={item.imageUrl}
+                          alt={item.title}
+                          className="w-full h-full object-cover rounded-none border border-zinc-200"
+                          referrerPolicy="no-referrer"
+                        />
+                      </div>
                     </div>
-                  )}
-                </div>
+
+                    <div className="flex-1 space-y-4 flex flex-col">
+                      <div className="space-y-1">
+                        <h3 className="text-2xl font-bold text-zinc-900 font-display">
+                          {item.title} <span className="text-zinc-500 font-normal">— {item.issuer}</span>
+                        </h3>
+                      </div>
+
+                      <div className="text-zinc-700 leading-relaxed">
+                        {item.description}
+                      </div>
+
+                      <div className="space-y-4 pt-2">
+                        <div className="flex items-center gap-2 text-zinc-500 text-sm">
+                          <MapPin size={16} className="text-emerald-600" />
+                          <span>{item.place}</span>
+                        </div>
+
+                        <div className="flex flex-wrap gap-4">
+                          {item.tags.map((tag) => (
+                            <span key={tag} className="text-zinc-500 text-sm font-medium">
+                              {tag}
+                            </span>
+                          ))}
+                        </div>
+
+                        {item.link && (
+                          <div className="pt-2">
+                            <a
+                              href={item.link.url}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="inline-flex items-center gap-2 text-sm font-bold text-emerald-600 hover:text-emerald-700 transition-colors group"
+                            >
+                              <ExternalLink size={16} /> {item.link.label}
+                            </a>
+                          </div>
+                        )}
+                      </div>
+                    </div>
+                  </motion.div>
+                ))}
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
       </motion.div>
