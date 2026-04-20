@@ -29,16 +29,17 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="pt-4 flex flex-wrap items-center justify-center md:justify-start gap-4">
+          <div className="pt-4 flex flex-col sm:flex-row items-center justify-center md:justify-start gap-4 w-full sm:w-auto">
             <Link
               to="/about"
-              className="inline-flex items-center justify-center px-6 py-2 text-sm bg-zinc-900 text-white font-medium rounded-none hover:bg-emerald-600 transition-all group"
+              className="w-full sm:w-auto inline-flex items-center justify-center px-6 py-3 text-sm bg-zinc-900 text-white font-medium rounded-none hover:bg-emerald-600 transition-all group"
             >
               Learn More <ArrowRight size={16} className="ml-2 group-hover:translate-x-1 transition-transform" />
             </Link>
             <a
-              href="#"
-              className="inline-flex items-center justify-center px-6 py-2 text-sm border border-zinc-200 text-zinc-900 font-medium rounded-none hover:border-emerald-600 hover:text-emerald-600 hover:bg-emerald-50/50 transition-all group"
+              href="./public/resume/resume-muqtadir-fuad.pdf"
+              target="_blank"
+              className="w-full sm:w-auto inline-flex items-center justify-center px-6 py-3 text-sm border border-zinc-200 text-zinc-900 font-medium rounded-none hover:border-emerald-600 hover:text-emerald-600 hover:bg-emerald-50/50 transition-all group"
             >
               Download CV <FileDown size={16} className="ml-2 group-hover:-translate-y-1 transition-transform" />
             </a>
