@@ -71,10 +71,10 @@ export default function Achievements() {
         className="space-y-16"
       >
         <div className="space-y-4">
-          <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-zinc-900 font-display">
+          <h1 className="text-3xl md:text-4xl font-bold tracking-tight text-zinc-900 font-display">
             Certificates & <span className="text-emerald-600 italic">Achievements</span>
           </h1>
-          <p className="text-xl text-zinc-600 max-w-2xl">
+          <p className="text-lg text-zinc-600 max-w-2xl">
             A collection of my certifications, awards, and notable accomplishments.
           </p>
         </div>
@@ -83,8 +83,8 @@ export default function Achievements() {
           {orderedGroupedAchievements.map(([category, items]) => (
             <div key={category} className="space-y-8">
               <div className="flex items-center gap-3">
-                <Award size={22} className="text-emerald-600" />
-                <h2 className="text-3xl font-bold text-zinc-900 font-display">
+                <Award size={20} className="text-emerald-600" />
+                <h2 className="text-2xl font-semibold text-zinc-900 font-display">
                   {category}
                 </h2>
               </div>
@@ -121,7 +121,7 @@ export default function Achievements() {
 
                     <div className="flex-1 space-y-4 flex flex-col">
                       <div className="space-y-1">
-                        <h3 className="text-2xl font-bold text-zinc-900 font-display">
+                        <h3 className="text-xl font-semibold text-zinc-900 font-display">
                           {item.title} <span className="text-zinc-500 font-normal">— {item.issuer}</span>
                         </h3>
                       </div>

@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { motion } from "motion/react";
 import { Menu, X, LogIn, LogOut, User as UserIcon } from "lucide-react";
 import { useState, useEffect } from "react";
@@ -70,13 +70,19 @@ export default function Navbar() {
           {/* Desktop Nav */}
           <div className="hidden md:flex items-center space-x-8">
             {navLinks.map((link) => (
-              <Link
+              <NavLink
                 key={link.name}
                 to={link.path}
-                className="text-sm font-medium text-zinc-600 hover:text-emerald-600 transition-colors"
+                className={({ isActive }) =>
+                  `text-sm font-medium transition-colors ${
+                    isActive
+                      ? "text-emerald-600 border-b-2 border-emerald-600 pb-1"
+                      : "text-zinc-600 hover:text-emerald-600"
+                  }`
+                }
               >
                 {link.name}
-              </Link>
+              </NavLink>
             ))}
             
             {user && (
@@ -123,14 +129,20 @@ export default function Navbar() {
           className="md:hidden bg-white border-b border-black/5 px-4 pt-2 pb-6 space-y-1"
         >
           {navLinks.map((link) => (
-            <Link
+            <NavLink
               key={link.name}
               to={link.path}
               onClick={() => setIsOpen(false)}
-              className="block px-3 py-2 text-base font-medium text-zinc-600 hover:text-emerald-600 hover:bg-zinc-50 rounded-md"
+              className={({ isActive }) =>
+                `block px-3 py-2 text-base font-medium rounded-md ${
+                  isActive
+                    ? "text-emerald-600 bg-emerald-50"
+                    : "text-zinc-600 hover:text-emerald-600 hover:bg-zinc-50"
+                }`
+              }
             >
               {link.name}
-            </Link>
+            </NavLink>
           ))}
           {user && (
             <div className="pt-4 mt-4 border-t border-black/5">

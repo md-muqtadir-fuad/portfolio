@@ -47,10 +47,10 @@ export default function Publications() {
         className="space-y-16"
       >
         <div className="space-y-4">
-          <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-zinc-900 font-display">
+          <h1 className="text-3xl md:text-4xl font-bold tracking-tight text-zinc-900 font-display">
             Research <span className="text-emerald-600 italic">Output</span>
           </h1>
-          <p className="text-xl text-zinc-600 max-w-2xl">
+          <p className="text-lg text-zinc-600 max-w-2xl">
             Selected publications, conference papers, and research manuscripts.
           </p>
         </div>
@@ -67,7 +67,7 @@ export default function Publications() {
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5, delay: i * 0.1 }}
-                className="group relative p-8 bg-white border border-zinc-100 rounded-none shadow-sm hover:shadow-md transition-all border-l-4 border-l-emerald-500"
+                className="group relative p-6 bg-white border border-zinc-100 rounded-none shadow-sm hover:shadow-md transition-all border-l-4 border-l-emerald-500"
               >
                 <div className="flex flex-wrap items-center gap-3 mb-4">
                   <span className={`px-3 py-1 rounded-none text-xs font-bold uppercase tracking-wider ${
@@ -83,7 +83,7 @@ export default function Publications() {
                   </span>
                 </div>
 
-                <h3 className="text-2xl font-bold text-zinc-900 mb-4 group-hover:text-emerald-600 transition-colors leading-tight">
+                <h3 className="text-xl font-semibold text-zinc-900 mb-4 group-hover:text-emerald-600 transition-colors leading-tight">
                   {pub.title}
                 </h3>
 
@@ -132,7 +132,7 @@ export default function Publications() {
                       transition={{ duration: 0.3 }}
                       className="overflow-hidden"
                     >
-                      <div className="mt-4 p-6 bg-zinc-50 border-l-2 border-emerald-200 text-zinc-600 text-sm leading-relaxed">
+                      <div className="mt-4 p-4 bg-zinc-50 border-l-2 border-emerald-200 text-zinc-600 text-sm leading-relaxed">
                         <p className="font-bold text-zinc-900 mb-2 uppercase tracking-wider text-xs">Abstract</p>
                         {pub.abstract || "Abstract not available for this publication."}
                       </div>

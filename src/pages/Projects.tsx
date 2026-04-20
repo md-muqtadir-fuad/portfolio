@@ -38,10 +38,10 @@ export default function Projects() {
         className="space-y-16"
       >
         <div className="space-y-4">
-          <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-zinc-900 font-display">
+          <h1 className="text-3xl md:text-4xl font-bold tracking-tight text-zinc-900 font-display">
             Selected <span className="text-emerald-600 italic">Work</span>
           </h1>
-          <p className="text-xl text-zinc-600 max-w-2xl">
+          <p className="text-lg text-zinc-600 max-w-2xl">
             A showcase of engineering design, machine learning, and IoT projects.
           </p>
         </div>
@@ -51,7 +51,7 @@ export default function Projects() {
             <RefreshCw className="animate-spin text-emerald-600" size={32} />
           </div>
         ) : (
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {projects.map((project, i) => (
               <motion.div
                 key={project.slug}
@@ -68,15 +68,15 @@ export default function Projects() {
                     referrerPolicy="no-referrer"
                   />
                   <div className="absolute top-4 left-4">
-                    <span className="px-4 py-1.5 bg-white/90 backdrop-blur-sm text-zinc-900 rounded-none text-xs font-bold uppercase tracking-wider shadow-sm">
+                    <span className="px-3 py-1 bg-white/90 backdrop-blur-sm text-zinc-900 rounded-none text-xs font-bold uppercase tracking-wider shadow-sm">
                       {project.category}
                     </span>
                   </div>
                 </div>
 
-                <div className="p-8 flex-1 flex flex-col space-y-6">
+                <div className="p-6 flex-1 flex flex-col space-y-4">
                   <div className="space-y-2">
-                    <h3 className="text-2xl font-bold text-zinc-900 group-hover:text-emerald-600 transition-colors">
+                    <h3 className="text-xl font-semibold text-zinc-900 group-hover:text-emerald-600 transition-colors">
                       {project.title}
                     </h3>
                     <p className="text-zinc-600 line-clamp-2">
@@ -86,7 +86,7 @@ export default function Projects() {
 
                   <div className="flex flex-wrap gap-2">
                     {project.tools.slice(0, 4).map((tool: string) => (
-                      <span key={tool} className="px-3 py-1 bg-emerald-50 text-emerald-700 rounded-none text-xs font-medium">
+                      <span key={tool} className="px-2.5 py-0.5 bg-emerald-50 text-emerald-700 rounded-none text-xs font-medium">
                         {tool}
                       </span>
                     ))}
@@ -109,7 +109,7 @@ export default function Projects() {
                           className="text-zinc-400 hover:text-emerald-600 transition-colors"
                           title={link.label}
                         >
-                          {link.label.toLowerCase().includes('github') ? <Github size={20} /> : <ExternalLink size={20} />}
+                          {link.label.toLowerCase().includes('github') ? <Github size={18} /> : <ExternalLink size={18} />}
                         </a>
                       ))}
                     </div>

@@ -1,5 +1,5 @@
 import { motion } from "motion/react";
-import { ArrowRight, BookOpen, ExternalLink } from "lucide-react";
+import { ArrowRight, BookOpen, ExternalLink, FileDown } from "lucide-react";
 import { Link } from "react-router-dom";
 import { siteContent } from "../constants";
 import { projectsData } from "../data/projectsData";
@@ -20,22 +20,28 @@ export default function Home() {
           className="flex-1 space-y-8 text-center md:text-left"
         >
           <div className="space-y-4">
-            <h1 className="text-5xl md:text-7xl font-bold tracking-tight font-display leading-tight">
+            <h1 className="text-4xl md:text-5xl font-bold tracking-tight font-display leading-tight">
               <span className="text-zinc-900">Md. Muqtadir</span>{" "}
               <span className="text-emerald-600">Fuad</span>
             </h1>
-            <p className="text-xl md:text-2xl text-zinc-500 max-w-2xl leading-relaxed font-light">
+            <p className="text-lg md:text-xl text-zinc-500 max-w-2xl leading-relaxed font-light">
               {siteContent.tagline}
             </p>
           </div>
 
-          <div className="pt-4">
+          <div className="pt-4 flex flex-wrap items-center justify-center md:justify-start gap-4">
             <Link
               to="/about"
-              className="inline-flex items-center justify-center px-8 py-4 bg-zinc-900 text-white font-medium rounded-none hover:bg-emerald-600 transition-all group"
+              className="inline-flex items-center justify-center px-6 py-2 text-sm bg-zinc-900 text-white font-medium rounded-none hover:bg-emerald-600 transition-all group"
             >
-              Learn More <ArrowRight size={20} className="ml-2 group-hover:translate-x-1 transition-transform" />
+              Learn More <ArrowRight size={16} className="ml-2 group-hover:translate-x-1 transition-transform" />
             </Link>
+            <a
+              href="#"
+              className="inline-flex items-center justify-center px-6 py-2 text-sm border border-zinc-200 text-zinc-900 font-medium rounded-none hover:border-emerald-600 hover:text-emerald-600 hover:bg-emerald-50/50 transition-all group"
+            >
+              Download CV <FileDown size={16} className="ml-2 group-hover:-translate-y-1 transition-transform" />
+            </a>
           </div>
         </motion.div>
 
@@ -45,7 +51,7 @@ export default function Home() {
           transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
           className="flex-1 flex justify-center md:justify-end"
         >
-          <div className="relative z-0 w-64 h-64 md:w-96 md:h-96 group cursor-pointer">
+          <div className="relative z-0 w-64 h-64 md:w-80 md:h-80 group cursor-pointer">
             <div className="absolute inset-0 border-2 border-emerald-600 translate-x-4 translate-y-4 group-hover:translate-x-0 group-hover:translate-y-0 transition-transform duration-500 ease-out -z-10" />
             <div className="w-full h-full overflow-hidden border border-zinc-200 bg-zinc-100 shadow-2xl">
               <img 
@@ -66,7 +72,7 @@ export default function Home() {
             <h2 className="text-sm font-bold uppercase tracking-[0.2em] text-emerald-600">
               Selected Work
             </h2>
-            <p className="text-3xl font-light text-zinc-900">
+            <p className="text-2xl font-medium text-zinc-900">
               Featured Projects
             </p>
           </div>
@@ -98,7 +104,7 @@ export default function Home() {
               </Link>
               <div className="space-y-2">
                 <div className="flex items-center justify-between">
-                  <h3 className="text-xl font-medium text-zinc-900 group-hover:text-emerald-600 transition-colors">
+                  <h3 className="text-lg font-medium text-zinc-900 group-hover:text-emerald-600 transition-colors">
                     {project.title}
                   </h3>
                   <span className="text-xs uppercase tracking-widest text-zinc-400">
@@ -121,7 +127,7 @@ export default function Home() {
             <h2 className="text-sm font-bold uppercase tracking-[0.2em] text-emerald-600">
               Research
             </h2>
-            <p className="text-3xl font-light text-zinc-900">
+            <p className="text-2xl font-medium text-zinc-900">
               Featured Publications
             </p>
           </div>
@@ -153,7 +159,7 @@ export default function Home() {
                       {pub.type}
                     </span>
                   </div>
-                  <h3 className="text-xl font-medium text-zinc-900 group-hover:text-emerald-600 transition-colors leading-snug">
+                  <h3 className="text-lg font-medium text-zinc-900 group-hover:text-emerald-600 transition-colors leading-snug">
                     {pub.title}
                   </h3>
                   <p className="text-zinc-500 text-sm font-light italic">

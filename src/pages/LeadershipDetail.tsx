@@ -34,10 +34,10 @@ export default function LeadershipDetail() {
         </Link>
 
         <div className="space-y-6">
-          <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-zinc-900 font-display">
+          <h1 className="text-3xl md:text-4xl font-bold tracking-tight text-zinc-900 font-display">
             {leadershipItem.title}
           </h1>
-          <h2 className="text-2xl text-emerald-600 font-medium">
+          <h2 className="text-xl text-emerald-600 font-medium">
             {leadershipItem.organization}
           </h2>
           
@@ -56,10 +56,10 @@ export default function LeadershipDetail() {
         <div className="space-y-12">
           {leadershipItem.detailedDescription && (
             <section className="space-y-6">
-              <h3 className="text-2xl font-bold font-display">About the Role</h3>
+              <h3 className="text-xl font-semibold font-display">About the Role</h3>
               <div className="prose prose-zinc max-w-none">
                 {leadershipItem.detailedDescription.split('\n\n').map((paragraph, i) => (
-                  <p key={i} className="text-zinc-600 leading-relaxed text-lg mb-4">
+                  <p key={i} className="text-zinc-600 leading-relaxed text-base mb-4">
                     {paragraph}
                   </p>
                 ))}
@@ -68,12 +68,12 @@ export default function LeadershipDetail() {
           )}
 
           <section className="space-y-6">
-            <h3 className="text-2xl font-bold font-display">Key Responsibilities & Achievements</h3>
+            <h3 className="text-xl font-semibold font-display">Key Responsibilities & Achievements</h3>
             <div className="grid gap-4">
               {leadershipItem.bullets.map((point, i) => (
-                <div key={i} className="flex gap-4 p-5 bg-zinc-50 rounded-2xl border border-zinc-100">
-                  <CheckCircle2 className="text-emerald-500 shrink-0 mt-0.5" size={24} />
-                  <p className="text-zinc-700 text-lg">{point}</p>
+                <div key={i} className="flex gap-4 p-4 bg-zinc-50 rounded-lg border border-zinc-100">
+                  <CheckCircle2 className="text-emerald-500 shrink-0 mt-0.5" size={20} />
+                  <p className="text-zinc-700 text-base">{point}</p>
                 </div>
               ))}
             </div>

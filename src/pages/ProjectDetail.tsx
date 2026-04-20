@@ -34,13 +34,13 @@ export default function ProjectDetail() {
         </Link>
 
         <div className="space-y-6">
-          <span className="px-4 py-1.5 bg-emerald-100 text-emerald-700 rounded-full text-xs font-bold uppercase tracking-wider">
+          <span className="px-3 py-1 bg-emerald-100 text-emerald-700 rounded-full text-xs font-bold uppercase tracking-wider">
             {project.category}
           </span>
-          <h1 className="text-5xl md:text-6xl font-bold tracking-tight text-zinc-900 font-display">
+          <h1 className="text-3xl md:text-4xl font-bold tracking-tight text-zinc-900 font-display">
             {project.title}
           </h1>
-          <p className="text-xl text-zinc-600 leading-relaxed max-w-3xl">
+          <p className="text-lg text-zinc-600 leading-relaxed max-w-3xl">
             {project.overview}
           </p>
         </div>
@@ -58,7 +58,7 @@ export default function ProjectDetail() {
           <div className="md:col-span-2 space-y-12">
             {project.detailedDescription && (
               <section className="space-y-6">
-                <h2 className="text-2xl font-bold font-display">About the Project</h2>
+                <h2 className="text-xl font-semibold font-display">About the Project</h2>
                 <div className="prose prose-zinc max-w-none">
                   {project.detailedDescription.split('\n\n').map((paragraph, i) => (
                     <p key={i} className="text-zinc-600 leading-relaxed mb-4">
@@ -70,10 +70,10 @@ export default function ProjectDetail() {
             )}
 
             <section className="space-y-6">
-              <h2 className="text-2xl font-bold font-display">Key Highlights</h2>
+              <h2 className="text-xl font-semibold font-display">Key Highlights</h2>
               <div className="grid gap-4">
                 {project.highlights.map((point, i) => (
-                  <div key={i} className="flex gap-4 p-4 bg-zinc-50 rounded-2xl border border-zinc-100">
+                  <div key={i} className="flex gap-4 p-3 bg-zinc-50 rounded-lg border border-zinc-100">
                     <CheckCircle2 className="text-emerald-500 shrink-0 mt-1" size={20} />
                     <p className="text-zinc-700">{point}</p>
                   </div>
@@ -84,10 +84,10 @@ export default function ProjectDetail() {
 
           <div className="space-y-12">
             <section className="space-y-6">
-              <h2 className="text-2xl font-bold font-display">Tools & Tech</h2>
+              <h2 className="text-xl font-semibold font-display">Tools & Tech</h2>
               <div className="flex flex-wrap gap-2">
                 {project.tools.map((tool) => (
-                  <span key={tool} className="px-4 py-2 bg-white border border-zinc-100 rounded-xl text-sm font-medium text-zinc-600 shadow-sm">
+                  <span key={tool} className="px-3 py-1 bg-white border border-zinc-100 rounded-md text-sm font-medium text-zinc-600 shadow-sm">
                     {tool}
                   </span>
                 ))}
@@ -95,7 +95,7 @@ export default function ProjectDetail() {
             </section>
 
             <section className="space-y-6">
-              <h2 className="text-2xl font-bold font-display">Links</h2>
+              <h2 className="text-xl font-semibold font-display">Links</h2>
               <div className="flex flex-col gap-3">
                 {project.links.map((link, i) => (
                   <a
@@ -103,7 +103,7 @@ export default function ProjectDetail() {
                     href={link.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center justify-between p-4 bg-zinc-900 text-white rounded-2xl hover:bg-emerald-600 transition-colors"
+                    className="flex items-center justify-between p-3 bg-zinc-900 text-white rounded-lg hover:bg-emerald-600 transition-colors"
                   >
                     <span className="font-bold">{link.label}</span>
                     <ExternalLink size={18} />

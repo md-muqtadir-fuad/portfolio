@@ -1,11 +1,12 @@
-import { Github, Linkedin, Twitter, Mail } from "lucide-react";
+import { Github, Linkedin, Twitter, Mail, FileText } from "lucide-react";
 
 export default function Footer() {
   const socialLinks = [
-    { name: "GitHub", icon: <Github size={20} />, url: "https://github.com/md-muqtadir-fuad" },
-    { name: "LinkedIn", icon: <Linkedin size={20} />, url: "https://linkedin.com/in/md-muqtadir-fuad" },
-    { name: "Twitter", icon: <Twitter size={20} />, url: "https://twitter.com/mmuqtadir_fuad" },
-    { name: "Email", icon: <Mail size={20} />, url: "mailto:mmfuad01@gmail.com" },
+    { name: "GitHub", icon: <Github size={18} />, url: "https://github.com/md-muqtadir-fuad" },
+    { name: "LinkedIn", icon: <Linkedin size={18} />, url: "https://linkedin.com/in/md-muqtadir-fuad" },
+    { name: "Twitter", icon: <Twitter size={18} />, url: "https://twitter.com/mmuqtadir_fuad" },
+    { name: "Email", icon: <Mail size={18} />, url: "mailto:mmfuad01@gmail.com" },
+    { name: "CV", icon: <FileText size={18} />, url: "/cv.html" },
   ];
 
   return (
@@ -13,9 +14,19 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0">
           <div className="text-center md:text-left">
-            <h3 className="text-lg font-bold tracking-tight">
-              MUQTADIR <span className="text-emerald-600">FUAD</span>
-            </h3>
+            <div className="flex items-center justify-center md:justify-start gap-3">
+              <h3 className="text-base font-semibold tracking-tight">
+                MUQTADIR <span className="text-emerald-600">FUAD</span>
+              </h3>
+              <a 
+                href="/cv.html" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="text-sm font-medium text-zinc-500 hover:text-emerald-600 underline decoration-dotted underline-offset-4 transition-colors"
+              >
+                view cv
+              </a>
+            </div>
             <p className="text-sm text-zinc-500 mt-1">
               Building the future with code and creativity.
             </p>

@@ -14,11 +14,11 @@ export default function About() {
       >
         {/* Header Section */}
         <section className="space-y-8">
-          <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-zinc-900 font-display">
+          <h1 className="text-3xl md:text-4xl font-bold tracking-tight text-zinc-900 font-display">
             About <span className="text-emerald-600 italic">Me</span>
           </h1>
           <div className="grid md:grid-cols-3 gap-12">
-            <div className="md:col-span-2 space-y-6 text-lg text-zinc-600 leading-relaxed">
+            <div className="md:col-span-2 space-y-4 text-base text-zinc-600 leading-relaxed">
               {aboutData.summary.map((para, i) => (
                 <p key={i}>{para}</p>
               ))}
@@ -50,7 +50,7 @@ export default function About() {
               </div>
             </div>
             <div className="space-y-8">
-              <div className="p-6 bg-emerald-50 rounded-3xl border border-emerald-100">
+              <div className="p-4 bg-emerald-50 rounded-lg border border-emerald-100">
                 <h3 className="text-emerald-900 font-bold mb-4 flex items-center gap-2">
                   <FileText size={20} /> Quick Info
                 </h3>
@@ -66,12 +66,12 @@ export default function About() {
 
         {/* Research Interests */}
         <section className="space-y-8">
-          <h2 className="text-3xl font-bold font-display flex items-center gap-3">
+          <h2 className="text-2xl font-semibold font-display flex items-center gap-3">
             <Globe className="text-emerald-600" /> Research Interests
           </h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {aboutData.researchInterests.map((interest, i) => (
-              <div key={i} className="p-4 bg-white border border-zinc-100 rounded-2xl shadow-sm hover:border-emerald-200 transition-colors">
+              <div key={i} className="p-3 bg-white border border-zinc-200 rounded-md shadow-sm hover:border-emerald-200 transition-colors">
                 <p className="text-zinc-700 text-sm">{interest}</p>
               </div>
             ))}
@@ -80,14 +80,14 @@ export default function About() {
 
         {/* Education */}
         <section className="space-y-8">
-          <h2 className="text-3xl font-bold font-display flex items-center gap-3">
+          <h2 className="text-2xl font-semibold font-display flex items-center gap-3">
             <GraduationCap className="text-emerald-600" /> Education
           </h2>
           <div className="space-y-8">
             {aboutData.education.map((edu, i) => (
               <div key={i} className="relative pl-8 border-l-2 border-emerald-100 space-y-2">
                 <div className="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-emerald-500 border-4 border-white shadow-sm" />
-                <h3 className="text-xl font-bold text-zinc-900">{edu.degree}</h3>
+                <h3 className="text-lg font-semibold text-zinc-900">{edu.degree}</h3>
                 <p className="text-emerald-600 font-medium">{edu.institution}</p>
                 <div className="flex items-center gap-4 text-sm text-zinc-500">
                   <span>{edu.location}</span>
@@ -104,7 +104,7 @@ export default function About() {
 
         {/* Skills */}
         <section className="space-y-8">
-          <h2 className="text-3xl font-bold font-display flex items-center gap-3">
+          <h2 className="text-2xl font-semibold font-display flex items-center gap-3">
             <Code className="text-emerald-600" /> Skills
           </h2>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
@@ -125,14 +125,14 @@ export default function About() {
 
         {/* Awards */}
         <section className="space-y-8">
-          <h2 className="text-3xl font-bold font-display flex items-center gap-3">
+          <h2 className="text-2xl font-semibold font-display flex items-center gap-3">
             <Award className="text-emerald-600" /> Honors & Awards
           </h2>
           <div className="space-y-4">
             {aboutData.awards.map((award, i) => (
-              <div key={i} className="flex gap-4 p-4 bg-zinc-50 rounded-2xl border border-zinc-100">
-                <div className="w-10 h-10 rounded-full bg-emerald-100 flex items-center justify-center shrink-0">
-                  <Award className="text-emerald-600" size={20} />
+              <div key={i} className="flex gap-4 p-3 bg-zinc-50 rounded-md border border-zinc-100">
+                <div className="w-8 h-8 rounded-full bg-emerald-100 flex items-center justify-center shrink-0">
+                  <Award className="text-emerald-600" size={16} />
                 </div>
                 <p className="text-zinc-700">{award}</p>
               </div>

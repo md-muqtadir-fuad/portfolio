@@ -15,17 +15,17 @@ export default function Experience() {
         {/* Work Experience */}
         <section className="space-y-12">
           <div className="space-y-4">
-            <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-zinc-900 font-display">
+            <h1 className="text-3xl md:text-4xl font-bold tracking-tight text-zinc-900 font-display">
               Professional <span className="text-emerald-600 italic">Journey</span>
             </h1>
-            <p className="text-xl text-zinc-600 max-w-2xl">
+            <p className="text-lg text-zinc-600 max-w-2xl">
               Gaining hands-on experience in industrial engineering and academic research.
             </p>
           </div>
 
           <div className="space-y-12">
             {experienceData.work.map((item, i) => (
-              <div key={i} className="group relative grid md:grid-cols-4 gap-8 p-8 bg-white border border-zinc-100 rounded-3xl shadow-sm hover:shadow-md transition-all">
+              <div key={i} className="group relative grid md:grid-cols-4 gap-8 p-6 bg-white border border-zinc-200 rounded-lg shadow-sm hover:shadow-md transition-all">
                 <div className="md:col-span-1 space-y-2">
                   <div className="text-emerald-600 font-bold flex items-center gap-2">
                     <Calendar size={16} /> {item.period}
@@ -35,10 +35,10 @@ export default function Experience() {
                   </div>
                 </div>
                 <div className="md:col-span-3 space-y-4">
-                  <h3 className="text-2xl font-bold text-zinc-900 group-hover:text-emerald-600 transition-colors">
+                  <h3 className="text-xl font-semibold text-zinc-900 group-hover:text-emerald-600 transition-colors">
                     {item.title}
                   </h3>
-                  <p className="text-lg font-medium text-zinc-700">{item.organization}</p>
+                  <p className="text-base font-medium text-zinc-700">{item.organization}</p>
                   <ul className="space-y-3">
                     {item.bullets.map((bullet, j) => (
                       <li key={j} className="text-zinc-600 flex gap-3">
@@ -55,15 +55,15 @@ export default function Experience() {
 
         {/* Leadership & Service */}
         <section className="space-y-12">
-          <h2 className="text-3xl font-bold font-display flex items-center gap-3">
+          <h2 className="text-2xl font-semibold font-display flex items-center gap-3">
             <Users className="text-emerald-600" /> Leadership & Service
           </h2>
           <div className="grid md:grid-cols-2 gap-6">
             {experienceData.leadership.map((item, i) => (
-              <div key={i} className="p-6 bg-zinc-50 rounded-3xl border border-zinc-100 space-y-6 flex flex-col">
+              <div key={i} className="p-5 bg-zinc-50 rounded-lg border border-zinc-200 space-y-6 flex flex-col">
                 <div className="space-y-4 flex-1">
                   <div className="space-y-1">
-                    <h3 className="text-xl font-bold text-zinc-900">{item.title}</h3>
+                    <h3 className="text-lg font-semibold text-zinc-900">{item.title}</h3>
                     <p className="text-emerald-600 font-medium">{item.organization}</p>
                   </div>
                   <div className="flex items-center justify-between text-sm text-zinc-500">
@@ -96,15 +96,15 @@ export default function Experience() {
 
         {/* Competitions */}
         <section className="space-y-12">
-          <h2 className="text-3xl font-bold font-display flex items-center gap-3">
+          <h2 className="text-2xl font-semibold font-display flex items-center gap-3">
             <Trophy className="text-emerald-600" /> Competitions & Hackathons
           </h2>
           <div className="space-y-6">
             {experienceData.competitions.map((item, i) => (
-              <div key={i} className="p-8 bg-emerald-900 text-white rounded-3xl space-y-6">
+              <div key={i} className="p-6 bg-emerald-900 text-white rounded-lg space-y-6">
                 <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
                   <div className="space-y-1">
-                    <h3 className="text-2xl font-bold">{item.title}</h3>
+                    <h3 className="text-xl font-semibold">{item.title}</h3>
                     <p className="text-emerald-300 font-medium">{item.organization}</p>
                   </div>
                   {item.link && (

@@ -1,7 +1,7 @@
 import { motion } from "motion/react";
 import { Mail, MapPin, Send, Github, Linkedin, Globe, CheckCircle2, AlertCircle, Loader2 } from "lucide-react";
 import { siteContent } from "../constants";
-import { useState } from "react";
+import React, { useState } from "react";
 import { db, handleFirestoreError, OperationType } from "../firebase";
 import { collection, addDoc, serverTimestamp } from "firebase/firestore";
 
@@ -44,10 +44,10 @@ export default function Contact() {
         className="space-y-16"
       >
         <div className="space-y-4">
-          <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-zinc-900 font-display">
+          <h1 className="text-3xl md:text-4xl font-bold tracking-tight text-zinc-900 font-display">
             Let's <span className="text-emerald-600 italic">Connect</span>
           </h1>
-          <p className="text-xl text-zinc-600 max-w-2xl">
+          <p className="text-lg text-zinc-600 max-w-2xl">
             Have a question or want to collaborate? Feel free to reach out.
           </p>
         </div>
@@ -56,24 +56,24 @@ export default function Contact() {
           <div className="space-y-12">
             <div className="space-y-8">
               <div className="flex gap-6">
-                <div className="w-14 h-14 rounded-2xl bg-emerald-100 flex items-center justify-center shrink-0">
+                <div className="w-12 h-12 rounded-lg bg-transparent flex items-center justify-center shrink-0">
                   <Mail className="text-emerald-600" size={28} />
                 </div>
                 <div className="space-y-1">
                   <h3 className="text-sm font-bold text-zinc-400 uppercase tracking-widest">Email</h3>
-                  <a href={`mailto:${siteContent.email}`} className="text-2xl font-bold text-zinc-900 hover:text-emerald-600 transition-colors">
+                  <a href={`mailto:${siteContent.email}`} className="text-lg font-semibold text-zinc-900 hover:text-emerald-600 transition-colors">
                     {siteContent.email}
                   </a>
                 </div>
               </div>
 
               <div className="flex gap-6">
-                <div className="w-14 h-14 rounded-2xl bg-emerald-100 flex items-center justify-center shrink-0">
+                <div className="w-12 h-12 rounded-lg bg-transparent flex items-center justify-center shrink-0">
                   <MapPin className="text-emerald-600" size={28} />
                 </div>
                 <div className="space-y-1">
                   <h3 className="text-sm font-bold text-zinc-400 uppercase tracking-widest">Location</h3>
-                  <p className="text-2xl font-bold text-zinc-900">{siteContent.location}</p>
+                  <p className="text-lg font-semibold text-zinc-900">{siteContent.location}</p>
                 </div>
               </div>
             </div>
@@ -91,7 +91,7 @@ export default function Contact() {
                     href={social.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-12 h-12 rounded-xl border border-zinc-200 flex items-center justify-center text-zinc-600 hover:bg-emerald-600 hover:text-white hover:border-emerald-600 transition-all"
+                    className="w-10 h-10 rounded-lg border border-zinc-200 flex items-center justify-center text-zinc-600 hover:bg-emerald-600 hover:text-white hover:border-emerald-600 transition-all"
                   >
                     {social.icon}
                   </a>
@@ -100,16 +100,16 @@ export default function Contact() {
             </div>
           </div>
 
-          <form onSubmit={handleSubmit} className="p-8 bg-zinc-50 rounded-[2.5rem] border border-zinc-100 space-y-6">
+          <form onSubmit={handleSubmit} className="p-6 bg-zinc-50 rounded-xl border border-zinc-100 space-y-6">
             {status === "success" && (
-              <div className="p-4 bg-emerald-50 border border-emerald-200 rounded-2xl flex items-start gap-3 text-emerald-800">
+              <div className="p-3 bg-emerald-50 border border-emerald-200 rounded-md flex items-start gap-3 text-emerald-800">
                 <CheckCircle2 className="shrink-0 mt-0.5" size={20} />
                 <p className="text-sm font-medium">Thank you! Your message has been sent successfully. I'll get back to you soon.</p>
               </div>
             )}
             
             {status === "error" && (
-              <div className="p-4 bg-red-50 border border-red-200 rounded-2xl flex items-start gap-3 text-red-800">
+              <div className="p-3 bg-red-50 border border-red-200 rounded-md flex items-start gap-3 text-red-800">
                 <AlertCircle className="shrink-0 mt-0.5" size={20} />
                 <p className="text-sm font-medium">{errorMessage}</p>
               </div>
@@ -123,7 +123,7 @@ export default function Contact() {
                 value={name}
                 onChange={(e) => setName(e.target.value)}
                 placeholder="Your Name"
-                className="w-full px-6 py-4 bg-white border border-zinc-200 rounded-2xl focus:outline-none focus:ring-2 focus:ring-emerald-500 transition-all"
+                className="w-full px-4 py-2 bg-white border border-zinc-200 rounded-md focus:outline-none focus:ring-2 focus:ring-emerald-500 transition-all"
               />
             </div>
             <div className="space-y-2">
@@ -134,7 +134,7 @@ export default function Contact() {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="your@email.com"
-                className="w-full px-6 py-4 bg-white border border-zinc-200 rounded-2xl focus:outline-none focus:ring-2 focus:ring-emerald-500 transition-all"
+                className="w-full px-4 py-2 bg-white border border-zinc-200 rounded-md focus:outline-none focus:ring-2 focus:ring-emerald-500 transition-all"
               />
             </div>
             <div className="space-y-2">
@@ -145,13 +145,13 @@ export default function Contact() {
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}
                 placeholder="How can I help you?"
-                className="w-full px-6 py-4 bg-white border border-zinc-200 rounded-2xl focus:outline-none focus:ring-2 focus:ring-emerald-500 transition-all resize-none"
+                className="w-full px-4 py-2 bg-white border border-zinc-200 rounded-md focus:outline-none focus:ring-2 focus:ring-emerald-500 transition-all resize-none"
               />
             </div>
             <button
               type="submit"
               disabled={status === "loading"}
-              className="w-full py-4 bg-emerald-600 text-white rounded-2xl font-bold hover:bg-emerald-700 transition-all flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed"
+              className="w-full py-2 bg-emerald-600 text-white rounded-md font-bold hover:bg-emerald-700 transition-all flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed"
             >
               {status === "loading" ? (
                 <>Sending... <Loader2 size={18} className="animate-spin" /></>
