@@ -17,6 +17,7 @@ import { useEffect, useState } from "react";
 import { auth, db } from "./firebase";
 import { onAuthStateChanged, User } from "firebase/auth";
 import { doc, getDoc, setDoc } from "firebase/firestore";
+import { Analytics } from "@vercel/analytics/react";
 
 export default function App() {
   const [user, setUser] = useState<User | null>(null);
@@ -73,6 +74,7 @@ export default function App() {
           <Footer />
         </div>
       </Router>
+      <Analytics />
     </ErrorBoundary>
   );
 }
