@@ -148,7 +148,6 @@ This repository is for personal portfolio use unless stated otherwise.
 
 ## Contact
 
-* **Email:** [mmfuad01@gmail.com](mailto:mmfuad01@gmail.com)
 * **GitHub:** [md-muqtadir-fuad](https://github.com/md-muqtadir-fuad)
 * **LinkedIn:** [md-muqtadir-fuad](https://www.linkedin.com/in/md-muqtadir-fuad/)
 * **ORCID:** [0009-0009-4362-0780](https://orcid.org/0009-0009-4362-0780)
