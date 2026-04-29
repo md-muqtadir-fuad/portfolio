@@ -61,8 +61,13 @@ export default function Contact() {
                 </div>
                 <div className="space-y-1">
                   <h3 className="text-sm font-bold text-zinc-400 uppercase tracking-widest">Email</h3>
-                  <a href={`mailto:${siteContent.email}`} className="text-lg font-semibold text-zinc-900 hover:text-emerald-600 transition-colors">
+                  {/*<a href={`mailto:${siteContent.email}`} className="text-lg font-semibold text-zinc-900 hover:text-emerald-600 transition-colors">
                     {siteContent.email}
+                  </a>*/}
+                  <a href = "#"  
+                  onClick = {(e) => e.preventDefault()} 
+                  className = "text-lg font-semibold text-zinc-900 hover:text-emerald-600 transition-colors">
+                    mmfuad01 [at] gmail [dot] com
                   </a>
                 </div>
               </div>

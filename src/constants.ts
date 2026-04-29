@@ -3,7 +3,7 @@ export const siteContent = {
   shortTitle: 'Undergraduate Student, BUET',
   tagline: 'Research, engineering, and intelligent systems for real-world impact.',
   location: 'Dhaka, Bangladesh',
-  email: 'mmfuad01@gmail.com',
+  email: 'mmfuad01 [at] gmail [dot] com',
   links: {
     github: 'https://github.com/md-muqtadir-fuad',
     linkedin: 'https://www.linkedin.com/in/md-muqtadir-fuad/',
