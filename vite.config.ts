@@ -1,12 +1,24 @@
 import tailwindcss from '@tailwindcss/vite';
 import react from '@vitejs/plugin-react';
 import path from 'path';
-import {defineConfig, loadEnv} from 'vite';
+import { defineConfig, loadEnv } from 'vite';
+import Sitemap from 'vite-plugin-sitemap'; // [1] Import the plugin
 
-export default defineConfig(({mode}) => {
+export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, '.', '');
+  
+  // portfolio sections for Google crawler
+  const routes = ['/', '/projects', '/publications', '/achievements', '/projects', '/experience', '/contact']; 
+
   return {
-    plugins: [react(), tailwindcss()],
+    plugins: [
+      react(), 
+      tailwindcss(),
+      Sitemap({ 
+        hostname: 'https://md-muqtadir-fuad.vercel.app', // [2] Your Vercel URL
+        dynamicRoutes: routes, // [3] Tells the plugin which pages to index
+      })
+    ],
     define: {
       'process.env.GEMINI_API_KEY': JSON.stringify(env.GEMINI_API_KEY),
     },
@@ -16,8 +28,6 @@ export default defineConfig(({mode}) => {
       },
     },
     server: {
-      // HMR is disabled in AI Studio via DISABLE_HMR env var.
-      // Do not modifyâfile watching is disabled to prevent flickering during agent edits.
       hmr: process.env.DISABLE_HMR !== 'true',
     },
   };
