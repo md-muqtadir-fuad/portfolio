@@ -2,7 +2,7 @@ export const publicationsData = [
   {
     id: 1,
     year: '2025',
-    status: 'Under Review',
+    status: 'Published',
     type: 'Conference Paper',
     title:
       'eGov-Lens: A Multi-Dimensional Machine Learning Approach to Aspect-Based Public Feedback Analysis on Bengali e-Government Platforms',
@@ -10,8 +10,8 @@ export const publicationsData = [
       'Fuad, M. M., Mazid, A. A., Adnan, M. I., Das, T., Prapti, S. S., & Mahbub, N.',
     venue:
       'Proceedings of the 28th International Conference on Computer and Information Technology (ICCIT), Cox’s Bazar, Bangladesh, Dec. 19–21, 2025',
-    link: '',
-    abstract: 'This research presents eGov-Lens, a multi-dimensional machine learning framework designed to analyze public feedback on Bengali e-government platforms. By employing aspect-based sentiment analysis, the system categorizes feedback into specific service dimensions, enabling government agencies to identify pain points and improve service delivery through data-driven insights.'
+    link: 'https://doi.org/10.1109/ICCIT68739.2025.11491291',
+    abstract: 'With the rapid expansion of e-services under Digital Bangladesh initiatives, citizens increasingly rely on online platforms to access government services and most often share their opinion in social media and digital forums. Existing sentiment analysis lacks of aspect-level insights in terms of egovernment related services. This paper presents eGov-Lens, a practical pipeline for aspect-based analysis of Bengali public feedback on e-government channels. We curate and annotate 34,001 comments (2020-2024) spanning twelve services and four policy-relevant aspects- sentiment, ease of find, responsiveness, and accuracy. The approach benchmarks three text representations (bag-of-words/CountVectorizer, BanglaBERT, mBERT) with logistic regression, support vector classifier, and naïve bayes. BanglaBERT with a support-vector head attains the strongest single-aspect quality on the policy-critical Accuracy task (micro-avg accuracy ≈0.93), while BanglaBERT with logistic regression offers the best accuracy-latency trade-off for deployment and a classical CountVectorizer+LR baseline trains and infers fastest. An entropy-weighted TOPSIS combines quality and cost to rank alternatives, favoring CountVectorizer+LR overall with BanglaBERT+LR a close second, and providing actionable guidance for NLP deployment on resource-constrained government infrastructure.'
   },
   {
     id: 2,
@@ -24,7 +24,7 @@ export const publicationsData = [
       'Fuad, M. M., Mazid, A. A., Adnan, M. I., & Ammar, K.',
     venue:
       'Proceedings of the 8th IEOM Bangladesh International Conference on Industrial Engineering and Operations Management, Dhaka, Bangladesh, Dec. 20–21, 2025',
-    link: 'https://index.ieomsociety.org/index.cfm/item/58299',
+    link: 'https://doi.org/10.46254/BA08.20250379',
     abstract: 'The inherent variability of manual assembly process possesses significant challenges to standardization and quality assurance within semi-automated food production sector. The study presents a quantitative and comparative analysis of stochastic nature of human fatigue that affect the productivity. By integrating high resolution time motion analysis along with statistical process control (SPC), this research has dived into two manual production line to quantify quality parameters, find relationship among product shape, operator performance behavior, efficiency and unit weight consistency. We employed regression analysis to estimate the relationship between time and worker fatigue in a controlled environment. Furthermore, process capability analysis reveals the relationship of human fatigue and process instability. Finally, using Monte Carlo algorithm, we have simulated the data to quantify the annual financial loss due to process instability.'
     },
   {

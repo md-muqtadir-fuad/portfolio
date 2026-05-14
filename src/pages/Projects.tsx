@@ -60,13 +60,14 @@ export default function Projects() {
                 transition={{ duration: 0.5, delay: i * 0.1 }}
                 className="group flex flex-col bg-white border border-zinc-100 rounded-none overflow-hidden shadow-sm hover:shadow-xl transition-all"
               >
-                <div className="aspect-video bg-zinc-100 relative overflow-hidden">
+                <div className="aspect-[4/3] bg-white relative overflow-hidden p-2">
                   <img
                     src={project.imageUrl || `https://picsum.photos/seed/${project.slug}/800/450`}
                     alt={project.title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    className="w-full h-full object-contain transition-transform duration-500"
                     referrerPolicy="no-referrer"
                   />
+
                   <div className="absolute top-4 left-4">
                     <span className="px-3 py-1 bg-white/90 backdrop-blur-sm text-zinc-900 rounded-none text-xs font-bold uppercase tracking-wider shadow-sm">
                       {project.category}
