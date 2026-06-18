@@ -1,4 +1,4 @@
-# Md. Muqtadir Fuad — Portfolio
+<!--# Md. Muqtadir Fuad — Portfolio
 
 A personal academic and engineering portfolio built to showcase research, projects, experience, publications, and achievements.
 
@@ -151,3 +151,6 @@ This repository is for personal portfolio use unless stated otherwise.
 * **GitHub:** [md-muqtadir-fuad](https://github.com/md-muqtadir-fuad)
 * **LinkedIn:** [md-muqtadir-fuad](https://www.linkedin.com/in/md-muqtadir-fuad/)
 * **ORCID:** [0009-0009-4362-0780](https://orcid.org/0009-0009-4362-0780)
+-->
+
+Depreciated. Redirect: [https://md-muqtadir-fuad.github.io/](https://md-muqtadir-fuad.github.io/)
